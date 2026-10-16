@@ -1,0 +1,21 @@
+From: Link Audit Test <link-audit@example.com>
+To: recipient@example.com
+Subject: Check several links
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <16-multi-links-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_16"
+
+--BOUNDARY_16
+Content-Type: text/plain; charset="UTF-8"
+
+URL A: https://httpbin.org/redirect/1
+URL B: https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F
+URL C: https://example.com/
+
+--BOUNDARY_16
+Content-Type: text/html; charset="UTF-8"
+
+<html><body><p>Several links for per-URL analysis.</p><a href="https://httpbin.org/redirect/1">One-step redirect endpoint</a><a href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F">Redirect-to endpoint</a><a href="https://example.com/">Direct page</a></body></html>
+
+--BOUNDARY_16--

@@ -1,0 +1,8 @@
+transformation,sample_count,original_accuracy,transformed_accuracy,original_f1,transformed_f1,prediction_flips,flip_rate,malicious_to_benign_evasion_count,malicious_to_malicious_count,benign_to_benign_count,benign_to_malicious_count,evasion_rate,false_alarm_rate,mean_probability_change
+added_subdomain,200,0.54,0.515,0.1481,0.0583,5,0.025,5,3,100,0,0.625,0.0,-0.0125
+deeper_subdomain,200,0.54,0.485,0.1481,0.0721,13,0.065,5,4,93,7,0.625,0.07,0.2865
+added_path,200,0.54,0.5,0.1481,0.6667,192,0.96,0,100,0,100,0.0,1.0,0.5925
+added_query,200,0.54,0.54,0.1481,0.1481,0,0.0,0,8,100,0,0.0,0.0,0.0
+added_fragment,200,0.54,0.54,0.1481,0.1481,0,0.0,0,8,100,0,0.0,0.0,0.0
+case_changed,200,0.54,0.515,0.1481,0.0583,5,0.025,5,3,100,0,0.625,0.0,-0.0125
+encoded_path,200,0.54,0.54,0.1481,0.1481,0,0.0,0,8,100,0,0.0,0.0,0.0

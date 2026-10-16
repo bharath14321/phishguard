@@ -1,0 +1,19 @@
+From: Account Notification <account@example.com>
+To: recipient@example.com
+Subject: Review your account link
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <17-text-href-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_17"
+
+--BOUNDARY_17
+Content-Type: text/plain; charset="UTF-8"
+
+This safe test demonstrates that displayed URL text and actual href can differ.
+
+--BOUNDARY_17
+Content-Type: text/html; charset="UTF-8"
+
+<html><body><p>Link mismatch test.</p><a href="https://www.iana.org/domains/reserved">https://example.com/login</a></body></html>
+
+--BOUNDARY_17--

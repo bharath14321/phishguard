@@ -1,0 +1,8 @@
+From: newsletter@legitimate-news.com
+To: analyst@enterprise.internal
+Subject: Daily Threat Intelligence Digest
+Date: Wed, 07 Oct 2026 08:00:00 +0000
+Authentication-Results: mx.phishguard.internal; spf=pass; dkim=pass; dmarc=pass
+Content-Type: text/plain; charset="UTF-8"
+
+Good morning. Here is your daily security summary. All systems operating normally.

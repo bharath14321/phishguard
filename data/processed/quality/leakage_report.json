@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "total_train_records": 2,
+  "exact_duplicates": 0,
+  "label_conflicts": 0,
+  "train_test_overlap": 1,
+  "domain_leakage_count": 1,
+  "external_evaluation_overlap": 0,
+  "details": {
+    "sample_train_test_overlap": [
+      "site1.com/p"
+    ],
+    "block_reason": "Severe train/test leakage detected."
+  },
+  "total_test_records": 2
+}

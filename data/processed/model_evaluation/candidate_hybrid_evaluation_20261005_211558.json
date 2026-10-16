@@ -1,0 +1,135 @@
+{
+  "timestamp": "20261005_211558",
+  "evaluation_protocol": "Clean 20% Held-Out Test Set from malicious_phish.csv (128,222 samples)",
+  "audit": {
+    "malicious_phish": {
+      "path": "/home/rahaman1407/AI-Phishing-Detection/data/raw/malicious_phish.csv",
+      "sha256": "d83ce942075dd63ed4d11560cfdcd9d512caa3d680e292f22cab484e8f074d01",
+      "size_bytes": 45664439,
+      "raw_records": 651191,
+      "valid_urls": 651191,
+      "malformed_count": 0,
+      "duplicates": 10072,
+      "label_distribution": {
+        "benign": 428103,
+        "defacement": 96457,
+        "phishing": 94111,
+        "malware": 32520
+      }
+    },
+    "phishtank": {
+      "path": "/home/rahaman1407/AI-Phishing-Detection/data/raw/phishtank.csv",
+      "sha256": "855b396be35be18893137bad81886d7a350a6610a7337fdf6b2b77fa573578b6",
+      "size_bytes": 14006402,
+      "raw_records": 73261,
+      "valid_urls": 73261,
+      "malformed_count": 0,
+      "duplicates": 3,
+      "unique_urls": 73258,
+      "label_distribution": {
+        "phishing": 73261
+      }
+    },
+    "openphish": {
+      "path": "/home/rahaman1407/AI-Phishing-Detection/data/raw/openphish.txt",
+      "sha256": "a3ddac60cb6b42e111959b4b6fe2b9faf7b45fe63102db000ef2f7feec5c73a8",
+      "size_bytes": 14167,
+      "raw_records": 300,
+      "valid_urls": 300,
+      "malformed_count": 0,
+      "duplicates": 0,
+      "unique_urls": 300,
+      "label_distribution": {
+        "phishing": 300
+      }
+    },
+    "urlhaus": {
+      "path": "/home/rahaman1407/AI-Phishing-Detection/data/raw/urlhaus.csv",
+      "sha256": "790e402245663e35d6c042ca77f88e67ad81386961f8f8d5000bb0b341c59581",
+      "size_bytes": 3109377,
+      "raw_records": 16546,
+      "valid_urls": 16546,
+      "malformed_count": 0,
+      "duplicates": 0,
+      "unique_urls": 16546,
+      "label_distribution": {
+        "malware": 16546
+      }
+    }
+  },
+  "feed_extraction_stats": {
+    "phishtank_raw": 73261,
+    "phishtank_new": 73218,
+    "openphish_raw": 300,
+    "openphish_new": 292,
+    "urlhaus_raw": 16546,
+    "urlhaus_new": 16546,
+    "cross_feed_overlap": 11,
+    "overlap_with_base": 40
+  },
+  "genuinely_new_records_count": 90056,
+  "candidate_training_size": 602942,
+  "candidate_class_distribution": {
+    "benign": 342464,
+    "malicious": 260478,
+    "benign_percentage": 56.8,
+    "malicious_percentage": 43.2
+  },
+  "candidate_source_provenance": {
+    "malicious_phish": 512886,
+    "phishtank": 73218,
+    "urlhaus": 16546,
+    "openphish": 292
+  },
+  "candidate_model": {
+    "path": "/home/rahaman1407/AI-Phishing-Detection/src/models/candidates/candidate_hybrid_rf_20261005_211558.joblib",
+    "filename": "candidate_hybrid_rf_20261005_211558.joblib",
+    "sha256": "29dc4b59984e870395724eb54ccaf61dde4987b164c8421837f8a25a12cb93ab",
+    "size_bytes": 1357101593,
+    "hyperparameters": {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_split": 2,
+      "class_weight": "balanced",
+      "random_state": 42
+    },
+    "training_duration_seconds": 30.78
+  },
+  "production_model_metrics": {
+    "accuracy": 0.9108,
+    "precision": 0.8517,
+    "recall": 0.8859,
+    "f1": 0.8685,
+    "confusion_matrix": {
+      "tn": 79044,
+      "fp": 6572,
+      "fn": 4860,
+      "tp": 37746
+    },
+    "false_positives": 6572,
+    "false_negatives": 4860
+  },
+  "candidate_model_metrics": {
+    "accuracy": 0.9138,
+    "precision": 0.8711,
+    "recall": 0.8692,
+    "f1": 0.8702,
+    "confusion_matrix": {
+      "tn": 80134,
+      "fp": 5482,
+      "fn": 5571,
+      "tp": 37035
+    },
+    "false_positives": 5482,
+    "false_negatives": 5571
+  },
+  "metric_differences": {
+    "accuracy": 0.003,
+    "precision": 0.0194,
+    "recall": -0.0167,
+    "f1": 0.0017,
+    "false_positives_diff": -1090,
+    "false_negatives_diff": 711
+  },
+  "candidate_verdict": "INCONCLUSIVE"
+}

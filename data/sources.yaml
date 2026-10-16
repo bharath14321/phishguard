@@ -1,0 +1,103 @@
+sources:
+  - name: "malicious_phish"
+    type: "url"
+    purpose: "training"
+    download_method: "local_file"
+    url: "data/raw/malicious_phish.csv"
+    authentication_required: false
+    manual_action_required: false
+    license_notes: "Kaggle Open Dataset (Mendeley Data - Phishing and Benign URLs)"
+    expected_format: "csv"
+    label_schema:
+      phishing: 1
+      defacement: 1
+      malware: 1
+      benign: 0
+    update_frequency: "static"
+    enabled: true
+
+  - name: "phishtank"
+    type: "url"
+    purpose: "local_ti"
+    download_method: "http_get"
+    url: "http://data.phishtank.com/data/online-valid.csv"
+    authentication_required: false
+    manual_action_required: false
+    license_notes: "PhishTank Developer Terms of Use"
+    expected_format: "csv"
+    label_schema:
+      verified: 1
+    update_frequency: "hourly"
+    enabled: true
+
+  - name: "urlhaus"
+    type: "url"
+    purpose: "local_ti"
+    download_method: "http_get"
+    url: "https://urlhaus.abuse.ch/downloads/csv_recent/"
+    authentication_required: false
+    manual_action_required: false
+    license_notes: "CC0 / Open Threat Intelligence"
+    expected_format: "csv"
+    label_schema:
+      malicious: 1
+    update_frequency: "daily"
+    enabled: true
+
+  - name: "openphish"
+    type: "url"
+    purpose: "local_ti"
+    download_method: "http_get"
+    url: "https://openphish.com/feed.txt"
+    authentication_required: false
+    manual_action_required: false
+    license_notes: "OpenPhish Community Feed / Non-commercial research"
+    expected_format: "txt"
+    label_schema:
+      phishing: 1
+    update_frequency: "hourly"
+    enabled: true
+
+  - name: "malwarebazaar"
+    type: "hash"
+    purpose: "local_ti"
+    download_method: "http_get"
+    url: "https://bazaar.abuse.ch/export/csv/recent/"
+    authentication_required: false
+    manual_action_required: false
+    license_notes: "CC0 / Abuse.ch"
+    expected_format: "csv"
+    label_schema:
+      malware: 1
+    update_frequency: "daily"
+    enabled: true
+
+  - name: "openphish_academic"
+    type: "url"
+    purpose: "external_evaluation"
+    download_method: "authenticated_api"
+    url: "https://openphish.com/academic_feed"
+    authentication_required: true
+    manual_action_required: true
+    manual_instructions: "OpenPhish academic access requires account approval and registration with academic email. Complete registration at openphish.com, configure OPENPHISH_API_KEY in .env, and re-run pipeline."
+    license_notes: "Academic Research Agreement"
+    expected_format: "json"
+    label_schema:
+      phishing: 1
+    update_frequency: "daily"
+    enabled: false
+
+  - name: "enron_email_sample"
+    type: "email"
+    purpose: "training_benign"
+    download_method: "archive_extract"
+    url: "https://www.cs.cmu.edu/~enron/enron_mail_20150507.tar.gz"
+    authentication_required: false
+    manual_action_required: true
+    manual_instructions: "Enron corpus is ~423MB compressed (~1.7GB raw). Requires user confirmation before automatic large download. Set ENRON_DOWNLOAD_APPROVED=true in .env to enable."
+    license_notes: "Public Domain / CMU Corpus"
+    expected_format: "maildir"
+    label_schema:
+      benign: 0
+    update_frequency: "static"
+    enabled: false

@@ -1,0 +1,11 @@
+From: security@microsoft-security-alert.invalid
+To: analyst@enterprise.internal
+Subject: URGENT: Your corporate password expires in 2 hours
+Date: Wed, 07 Oct 2026 08:05:00 +0000
+Authentication-Results: mx.phishguard.internal; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/html; charset="UTF-8"
+
+<html><body>
+<p>Immediate action required! Verify your password credentials immediately to prevent account suspension.</p>
+<p><a href="https://allegrolokalnie.lokalna-6747.sbs">Verify Account Now</a></p>
+</body></html>

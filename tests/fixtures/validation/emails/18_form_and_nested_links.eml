@@ -1,0 +1,34 @@
+From: Portal Administration <admin@secure-portal.example.com>
+To: recipient@example.com
+Subject: Account Verification Required - Nested Portal Form
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <18-form-nested-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_18"
+
+--BOUNDARY_18
+Content-Type: text/plain; charset="UTF-8"
+
+Immediate attention required: your account credentials require verification.
+Please visit the portal: https://httpbin.org/forms/post
+Help and documentation: https://example.com/help
+
+--BOUNDARY_18
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+  <h2>Portal Security Verification</h2>
+  <p>Please review and submit your updated verification status.</p>
+  <form action="https://httpbin.org/post" method="POST">
+    <label for="user">Username:</label>
+    <input type="text" id="user" name="user"><br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="pass"><br>
+    <input type="submit" value="Verify Identity">
+  </form>
+  <p>For inquiries, please check <a href="https://example.com/help">Help Center</a> or contact <a href="https://www.iana.org/domains/reserved">Support</a>.</p>
+</body>
+</html>
+
+--BOUNDARY_18--

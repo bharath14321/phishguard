@@ -1,0 +1,29 @@
+Experiment 001 — URL Lexical Baseline
+
+Dataset:
+641,108 usable URLs
+
+Features:
+14 URL lexical features
+
+Model:
+Logistic Regression
+
+Split:
+80% training
+20% testing
+
+Random state:
+42
+
+Accuracy:
+0.7599
+
+Precision:
+0.6224
+
+Recall:
+0.7057
+
+F1:
+0.661

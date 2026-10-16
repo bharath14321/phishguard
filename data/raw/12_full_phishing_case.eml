@@ -1,0 +1,51 @@
+From: "Microsoft Security Center <security@microsoft.com>" <alerts@evil-domain-phish.com>
+To: target-user@company.com
+Subject: URGENT: Account Suspended - Immediate Verification Required
+Date: Mon, 5 Oct 2026 12:00:00 +0000
+Message-ID: <12-full-phish-case@evil-domain-phish.com>
+Authentication-Results: mx.company.com; spf=fail (sender IP 198.51.100.25) smtp.mailfrom=evil-domain-phish.com; dkim=fail (signature did not verify) header.d=evil-domain-phish.com; dmarc=fail action=none header.from=microsoft.com;
+Received-SPF: fail (mx.company.com: domain of evil-domain-phish.com does not designate 198.51.100.25 as permitted sender)
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY_MIXED_12"
+
+--BOUNDARY_MIXED_12
+Content-Type: multipart/alternative; boundary="BOUNDARY_ALT_12"
+
+--BOUNDARY_ALT_12
+Content-Type: text/plain; charset="UTF-8"
+
+Your Microsoft 365 account has been temporarily suspended due to suspicious activity.
+Please verify your identity immediately:
+https://login-outlook365.yzz.me/
+
+See attached statement for incident report.
+
+--BOUNDARY_ALT_12
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html>
+<html>
+<head><title>Account Security Notice</title></head>
+<body>
+<h2>Microsoft Security Notice</h2>
+<p>Your Microsoft 365 account has been temporarily suspended due to unauthorized access attempts.</p>
+<p>Please resolve this immediately to avoid permanent account termination:</p>
+<p><a href="https://login-outlook365.yzz.me/">Click here to restore access now</a></p>
+<p>Review the attached document for full audit logs.</p>
+<img src="https://example.com/pixel.gif" width="1" height="1" alt="" style="display:none;" />
+</body>
+</html>
+
+--BOUNDARY_ALT_12--
+
+--BOUNDARY_MIXED_12
+Content-Type: text/plain; charset="UTF-8"; name="security_audit.txt"
+Content-Disposition: attachment; filename="security_audit.txt"
+Content-Transfer-Encoding: 7bit
+
+Security Audit Report
+Account: target-user@company.com
+Status: Locked
+Emergency support portal: https://login-outlook365.yzz.me/support
+
+--BOUNDARY_MIXED_12--

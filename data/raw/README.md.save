@@ -1,0 +1,21 @@
+## Required columns
+
+url
+label
+
+## Labels
+
+0 = legitimate
+1 = phishing
+
+## Dataset documentation
+
+Record:
+- Dataset source: Kaggle (Malicious URLs Dataset / PhishTank aggregation)
+- Dataset URL/reference: https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset
+- Collection date: Retrieved for AI Phishing Detection project baseline (2026)
+- Number of samples: 30,000 total subset samples (example partitioning)
+- Class distribution: ~66% Legitimate (Label 0), ~34% Phishing/Malicious (Label 1)
+- License: Open Data Commons Open Database License (ODbL)
+- Preprocessing performed: Filtered raw multi-class logs down to binary labels (benign/legitimate = 0, phishing = 1). The dataset was split into 25,000 samples for model training and 5,000 samples isolated for testing evaluation.
+

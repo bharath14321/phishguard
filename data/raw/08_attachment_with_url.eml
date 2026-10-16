@@ -1,0 +1,22 @@
+From: "Billing Dept" <billing@example.org>
+To: recipient@example.com
+Subject: Your Pending Invoice #PG-1001
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <08-att-test@example.org>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY_08"
+
+--BOUNDARY_08
+Content-Type: text/plain; charset="UTF-8"
+
+Please see the attached invoice document for details regarding your pending order.
+
+--BOUNDARY_08
+Content-Type: text/plain; charset="UTF-8"; name="invoice.txt"
+Content-Disposition: attachment; filename="invoice.txt"
+Content-Transfer-Encoding: 7bit
+
+Invoice #PG-1001
+Verify invoice: https://example.com/invoice/verify
+
+--BOUNDARY_08--

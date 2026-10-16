@@ -1,0 +1,73 @@
+{
+  "manifest_version": "1.1",
+  "audit_date": "2026-10-04",
+  "target_model": "Random Forest URL Lexical Classifier",
+  "artifact_path": "src/models/url_random_forest.joblib",
+  "artifact_status": "PRESENT_AND_VERIFIED",
+  "artifact_sha256": "fa83f02535e9c94cc776e3629b4103c6e849fd127fcbdf032f28c3149be5a8c7",
+  "artifact_size_bytes": 1344496345,
+  "historical_baseline": {
+    "dataset": "data/processed/url_features.csv",
+    "dataset_sha256": "fc9986c8d068e319f49ca52a04cd49b62315ef4a7835e09b46f3f85eee858439",
+    "total_samples": 641108,
+    "train_samples": 512886,
+    "test_samples": 128222,
+    "split_method": "train_test_split(test_size=0.20, random_state=42, stratify=y)",
+    "accuracy": 0.9108,
+    "precision": 0.8517,
+    "recall": 0.8859,
+    "f1_score": 0.8685,
+    "confusion_matrix": {
+      "tn": 79044,
+      "fp": 6572,
+      "fn": 4860,
+      "tp": 37746
+    }
+  },
+  "reproduced_metrics": {
+    "accuracy": 0.9108,
+    "precision": 0.8517,
+    "recall": 0.8859,
+    "f1_score": 0.8685,
+    "confusion_matrix": {
+      "tn": 79044,
+      "fp": 6572,
+      "fn": 4860,
+      "tp": 37746
+    },
+    "match_status": "EXACT_MATCH"
+  },
+  "training_configuration": {
+    "model_class": "sklearn.ensemble.RandomForestClassifier",
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "n_jobs": -1,
+    "threshold": 0.5
+  },
+  "feature_columns": [
+    "url_length",
+    "hostname_length",
+    "path_length",
+    "query_length",
+    "dot_count",
+    "hyphen_count",
+    "digit_count",
+    "special_char_count",
+    "subdomain_count",
+    "contains_ip",
+    "uses_https",
+    "contains_at",
+    "contains_double_slash",
+    "suspicious_keyword_count"
+  ],
+  "verification_results": {
+    "direct_vs_wrapper_match": true,
+    "feature_order_verified": true,
+    "research_safety_enforced": true,
+    "final_status": "REPRODUCIBLE"
+  }
+}

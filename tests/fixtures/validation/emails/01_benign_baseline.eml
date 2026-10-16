@@ -1,0 +1,41 @@
+From: IT Service Desk <support@company.internal>
+To: employee@company.internal
+Subject: Scheduled Monthly System Maintenance Window
+Date: Mon, 12 Oct 2026 10:00:00 +0000
+Message-ID: <maintenance-20261012@company.internal>
+Authentication-Results: mx.company.internal; spf=pass (sender IP is 198.51.100.1) smtp.mailfrom=support@company.internal; dkim=pass header.d=company.internal; dmarc=pass
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============789456123=="
+
+--===============789456123==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello Team,
+
+Please be advised that standard scheduled maintenance will occur this Saturday from 02:00 to 04:00 UTC.
+Internal systems will remain accessible, and no user action or password update is required.
+
+Best regards,
+IT Operations Team
+
+--===============789456123==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Maintenance Notice</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #333333;">
+  <p>Hello Team,</p>
+  <p>Please be advised that standard scheduled maintenance will occur this Saturday from 02:00 to 04:00 UTC.</p>
+  <p>Internal systems will remain accessible, and no user action or password update is required.</p>
+  <div style="margin-top: 20px;">
+    <img src="https://company.internal/static/logo.png" width="240" height="60" alt="Company Logo" />
+  </div>
+  <p>Best regards,<br />IT Operations Team</p>
+</body>
+</html>
+--===============789456123==--

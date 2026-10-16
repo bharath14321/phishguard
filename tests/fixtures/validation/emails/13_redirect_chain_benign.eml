@@ -1,0 +1,21 @@
+From: Example Notifications <notifications@example.com>
+To: recipient@example.com
+Subject: Your requested document is ready
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <13-redirect-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_13"
+
+--BOUNDARY_13
+Content-Type: text/plain; charset="UTF-8"
+
+Test redirect chain:
+https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F
+Expected destination for this test: https://example.com/
+
+--BOUNDARY_13
+Content-Type: text/html; charset="UTF-8"
+
+<html><body><p>Your document is ready.</p><a href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F">Open document</a></body></html>
+
+--BOUNDARY_13--

@@ -1,0 +1,168 @@
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Upload and quarantine directory
+data/quarantine/
+quarantine/
+
+# Test artifacts and temporary files
+*.tmp
+*.log
+*.joblib
+tests/.pytest_cache/
+
+# System files
+.DS_Store
+Thumbs.db
+frontend-react/node_modules/
+data/raw/phishtank.csv
+data/raw/urlhaus.csv
+data/raw/openphish.txt
+data/raw/malwarebazaar.csv
+data/threat_intelligence.db.backup
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+secrets/
+
+# Python caches and environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+scratch/
+
+# Local databases and backups
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.db.backup
+
+# Generated validation reports
+reports/validation/validation_*.json
+reports/validation/validation_*.csv
+reports/validation/validation_*.html
+reports/validation/validation_*.md
+
+# Downloaded datasets and generated data
+data/raw/*.csv
+data/raw/*.txt
+data/external/
+data/processed/*.csv
+
+# Local ML model artifacts
+src/models/*.joblib
+src/models/candidates/
+models/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+secrets/
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+scratch/
+
+# Local databases and backups
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.db.backup
+
+# Generated validation reports
+reports/validation/validation_*.json
+reports/validation/validation_*.csv
+reports/validation/validation_*.html
+reports/validation/validation_*.md
+
+# Downloaded datasets and generated data
+data/raw/*.csv
+data/raw/*.txt
+data/external/
+data/processed/*.csv
+
+# Local ML model artifacts
+src/models/*.joblib
+src/models/candidates/
+models/

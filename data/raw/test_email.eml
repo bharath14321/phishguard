@@ -1,0 +1,11 @@
+From: Microsoft Support <support@fake-example.com>
+Reply-To: attacker@evil-example.com
+Return-Path: bounce@evil-example.com
+To: victim@example.com
+Subject: Urgent Account Verification
+Message-ID: <12345@fake-example.com>
+Date: Wed, 30 Sep 2026 19:00:00 +0530
+Content-Type: text/plain
+
+Your account requires urgent verification.
+Please click the link below.

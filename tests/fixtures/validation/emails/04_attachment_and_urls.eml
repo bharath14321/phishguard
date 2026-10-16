@@ -1,0 +1,32 @@
+From: Reports Service <billing@vendor.example>
+To: accounts@company.internal
+Subject: Monthly Service Invoicing Summary
+Date: Tue, 13 Oct 2026 09:30:00 +0000
+Message-ID: <invoice-summary-20261013@vendor.example>
+Authentication-Results: mx.company.internal; spf=pass; dkim=pass; dmarc=pass
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============INVOICE123=="
+
+--===============INVOICE123==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Hello Accounts Department,
+
+Please find attached the plain-text audit summary for this billing cycle.
+For details on company accounting guidelines, refer to https://documentation.example/billing-info.
+
+Thank you,
+Billing Services
+
+--===============INVOICE123==
+Content-Type: text/plain; charset="utf-8"; name="safe_sample.txt"
+Content-Disposition: attachment; filename="safe_sample.txt"
+Content-Transfer-Encoding: 7bit
+
+Invoice Summary Report
+Billing Cycle: October 2026
+Account Reference: ACCT-98231
+Status: Paid in full. No balance outstanding.
+
+--===============INVOICE123==--

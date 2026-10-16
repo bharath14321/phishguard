@@ -1,0 +1,20 @@
+From: Web Page Test <web-check@example.com>
+To: recipient@example.com
+Subject: Review the sign-in page
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <14-form-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_14"
+
+--BOUNDARY_14
+Content-Type: text/plain; charset="UTF-8"
+
+Inspect page structure only; do not enter credentials.
+URL: https://httpbin.org/forms/post
+
+--BOUNDARY_14
+Content-Type: text/html; charset="UTF-8"
+
+<html><body><p>Page-structure test.</p><a href="https://httpbin.org/forms/post">Inspect form test page</a></body></html>
+
+--BOUNDARY_14--

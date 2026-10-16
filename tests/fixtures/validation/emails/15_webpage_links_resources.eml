@@ -1,0 +1,19 @@
+From: Web Audit Test <web-audit@example.com>
+To: recipient@example.com
+Subject: Inspect page links and resources
+Date: Mon, 5 Oct 2026 10:00:00 +0000
+Message-ID: <15-links-test@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="BOUNDARY_15"
+
+--BOUNDARY_15
+Content-Type: text/plain; charset="UTF-8"
+
+Inspect https://example.com/ and report page links/resources when safely retrievable.
+
+--BOUNDARY_15
+Content-Type: text/html; charset="UTF-8"
+
+<html><body><h1>Web resource inspection</h1><a href="https://example.com/">Main page</a><a href="https://www.iana.org/domains/reserved">Reserved domains information</a><img src="https://example.com/test-image.png" width="32" height="32" alt="Test image"></body></html>
+
+--BOUNDARY_15--

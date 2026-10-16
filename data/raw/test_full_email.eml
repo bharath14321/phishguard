@@ -1,0 +1,56 @@
+From: "Microsoft Security" <support@fake-example.com>
+Reply-To: attacker@evil-example.com
+Return-Path: bounce@evil-example.com
+To: victim@example.com
+Subject: URGENT: Verify your account immediately
+Date: Mon, 5 Oct 2026 20:00:00 +0530
+Message-ID: <test-phish-001@example.com>
+MIME-Version: 1.0
+Authentication-Results: mx.example.net;
+    spf=fail smtp.mailfrom=evil-example.com;
+    dkim=fail;
+    dmarc=fail header.from=fake-example.com
+Content-Type: multipart/mixed; boundary="PHISHGUARD-TEST"
+
+--PHISHGUARD-TEST
+Content-Type: text/plain; charset="UTF-8"
+
+URGENT ACTION REQUIRED
+
+Your account requires immediate verification.
+
+Please verify your account here:
+https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F
+
+Failure to verify your account may result in suspension.
+
+--PHISHGUARD-TEST
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<body>
+<h2>Urgent Account Verification</h2>
+<p>Your account requires immediate verification.</p>
+<p>
+<a href="https://example.com/verify">
+https://microsoft.com/account/verify
+</a>
+</p>
+<p>Please confirm your account immediately.</p>
+</body>
+</html>
+
+--PHISHGUARD-TEST
+Content-Type: text/plain; name="invoice.txt"
+Content-Disposition: attachment; filename="invoice.txt"
+Content-Transfer-Encoding: 8bit
+
+Invoice verification document
+
+Please review the following link:
+https://example.com/invoice/verify
+
+This is a PHISHGUARD SAFE TEST attachment.
+It contains no executable code.
+
+--PHISHGUARD-TEST--

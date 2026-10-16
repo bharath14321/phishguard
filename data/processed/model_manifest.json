@@ -1,0 +1,146 @@
+{
+  "pipeline_version": "2.0.0",
+  "timestamp": "2026-10-04T18:14:10.178779",
+  "duration_seconds": 0.63,
+  "stages": {
+    "ingestion": {
+      "total_sources": 7,
+      "acquired": 1,
+      "pending_manual_actions": 2,
+      "sources": [
+        {
+          "name": "malicious_phish",
+          "status": "SUCCESS",
+          "purpose": "training",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/malicious_phish.csv",
+          "sha256": "d83ce942075dd63ed4d11560cfdcd9d512caa3d680e292f22cab484e8f074d01",
+          "bytes_downloaded": 45664439,
+          "manual_action_required": false,
+          "message": "Existing local dataset verified."
+        },
+        {
+          "name": "phishtank",
+          "status": "ERROR",
+          "purpose": "local_ti",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/phishtank.csv",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": false,
+          "message": "Network exception: ConnectionError - HTTPConnectionPool(host='data.phishtank.com', port=80): Max retries exceeded with url: /data/online-valid.csv (Caused by NameResolutionError(\"HTTPConnection(host='data.phishtank.com', port=80): Failed to resolve 'data.phishtank.com' ([Errno -3] Temporary failure in name resolution)\"))"
+        },
+        {
+          "name": "urlhaus",
+          "status": "ERROR",
+          "purpose": "local_ti",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/urlhaus.csv",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": false,
+          "message": "Network exception: ConnectionError - HTTPSConnectionPool(host='urlhaus.abuse.ch', port=443): Max retries exceeded with url: /downloads/csv_recent/ (Caused by NameResolutionError(\"HTTPSConnection(host='urlhaus.abuse.ch', port=443): Failed to resolve 'urlhaus.abuse.ch' ([Errno -3] Temporary failure in name resolution)\"))"
+        },
+        {
+          "name": "openphish",
+          "status": "ERROR",
+          "purpose": "local_ti",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/openphish.txt",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": false,
+          "message": "Network exception: ConnectionError - HTTPSConnectionPool(host='openphish.com', port=443): Max retries exceeded with url: /feed.txt (Caused by NameResolutionError(\"HTTPSConnection(host='openphish.com', port=443): Failed to resolve 'openphish.com' ([Errno -3] Temporary failure in name resolution)\"))"
+        },
+        {
+          "name": "malwarebazaar",
+          "status": "ERROR",
+          "purpose": "local_ti",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/malwarebazaar.csv",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": false,
+          "message": "Network exception: ConnectionError - HTTPSConnectionPool(host='bazaar.abuse.ch', port=443): Max retries exceeded with url: /export/csv/recent/ (Caused by NameResolutionError(\"HTTPSConnection(host='bazaar.abuse.ch', port=443): Failed to resolve 'bazaar.abuse.ch' ([Errno -3] Temporary failure in name resolution)\"))"
+        },
+        {
+          "name": "openphish_academic",
+          "status": "PENDING_MANUAL_ACTION",
+          "purpose": "external_evaluation",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/openphish_academic.json",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": true,
+          "message": "OpenPhish academic access requires account approval and registration with academic email. Complete registration at openphish.com, configure OPENPHISH_API_KEY in .env, and re-run pipeline."
+        },
+        {
+          "name": "enron_email_sample",
+          "status": "PENDING_MANUAL_ACTION",
+          "purpose": "training_benign",
+          "destination": "/home/rahaman1407/AI-Phishing-Detection/data/raw/enron_email_sample.maildir",
+          "sha256": null,
+          "bytes_downloaded": 0,
+          "manual_action_required": true,
+          "message": "Enron corpus is ~423MB compressed (~1.7GB raw). Requires user confirmation before automatic large download. Set ENRON_DOWNLOAD_APPROVED=true in .env to enable."
+        }
+      ]
+    },
+    "threat_intelligence": {
+      "status": "SUCCESS",
+      "total_indicators": 0,
+      "source_breakdown": {},
+      "database_path": "/home/rahaman1407/AI-Phishing-Detection/data/threat_intelligence.db",
+      "duration_seconds": 0.02
+    },
+    "leakage_quality": {
+      "status": "PASSED",
+      "total_train_records": 15000,
+      "exact_duplicates": 0,
+      "label_conflicts": 0,
+      "train_test_overlap": 0,
+      "domain_leakage_count": 0,
+      "external_evaluation_overlap": 0,
+      "details": {}
+    },
+    "candidate_model": {
+      "candidate_file": "candidate_randomforest_20261004_181410.joblib",
+      "candidate_path": "/home/rahaman1407/AI-Phishing-Detection/src/models/candidates/candidate_randomforest_20261004_181410.joblib",
+      "model_type": "RandomForest",
+      "training_samples": 12000,
+      "test_samples": 3000,
+      "duration_seconds": 0.56,
+      "metrics": {
+        "accuracy": 0.9147,
+        "precision": 0.8282,
+        "recall": 0.8534,
+        "f1": 0.8406,
+        "roc_auc": 0.9635,
+        "confusion_matrix": [
+          [
+            2069,
+            140
+          ],
+          [
+            116,
+            675
+          ]
+        ]
+      },
+      "baseline_comparison": {
+        "production_baseline": {
+          "model_name": "url_random_forest.joblib",
+          "model_type": "RandomForestClassifier",
+          "accuracy": 0.9108,
+          "precision": 0.8517,
+          "recall": 0.8859,
+          "f1": 0.8685
+        },
+        "delta_accuracy": 0.0039,
+        "delta_f1": -0.0279,
+        "meets_baseline": true
+      },
+      "promotion_status": "MANUAL_APPROVAL_REQUIRED_FOR_PRODUCTION_PROMOTION",
+      "created_at": "2026-10-04T18:14:10.177899"
+    }
+  },
+  "production_model_status": {
+    "current_production_model": "src/models/url_random_forest.joblib",
+    "status": "UNCHANGED",
+    "approval_required": true
+  }
+}

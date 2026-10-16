@@ -1,0 +1,8 @@
+From: admin@corporate.com
+To: analyst@enterprise.internal
+Subject: Password Reset
+Date: Wed, 07 Oct 2026 08:25:00 +0000
+Authentication-Results: mx.phishguard.internal; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain; charset="UTF-8"
+
+Critical infrastructure update.
