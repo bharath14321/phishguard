@@ -166,3 +166,65 @@ data/processed/*.csv
 src/models/*.joblib
 src/models/candidates/
 models/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+secrets/
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+scratch/
+
+# Local databases and backups
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.db.backup
+
+# Generated validation reports
+reports/validation/validation_*.json
+reports/validation/validation_*.csv
+reports/validation/validation_*.html
+reports/validation/validation_*.md
+
+# Downloaded datasets and generated data
+data/raw/*.csv
+data/raw/*.txt
+data/external/
+data/processed/*.csv
+
+# Local ML model artifacts
+src/models/*.joblib
+src/models/candidates/
+models/
